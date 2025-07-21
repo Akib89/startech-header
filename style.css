@@ -1,0 +1,334 @@
+:root {
+    --s-primary: #ef4a23;
+    --s-primary-dark: #D51E0B;
+    --s-secondary: #3749bb;
+    --s-tertiary: #838383;
+    --s-hf-bg: #081621;
+    --s-b-bg: #f2f4f8;
+    --s-m-bg: #6E2594;
+    --s-s-bg: rgba(55, 73, 187, .05);
+    --s-f-c1: #666666;
+    --s-f-c2: #fff;
+}
+
+
+.q-actions .ac.build-pc .btn {
+    background: linear-gradient(45deg, #00237e, #3749bb, #0bc1e9, #3749bb, #00237e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    border: none;
+    line-height: 42px;
+}
+
+.btn {
+    background: var(--s-secondary);
+    display: inline-block;
+    border: 2px solid var(--s-secondary);
+    padding: 0 20px;
+    margin: 0;
+    height: 42px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.q-actions .ac p a {
+    color: var(--s-tertiary);
+}
+
+.q-actions .ac a {
+    text-decoration: none;
+}
+
+.q-actions .ac.build-pc {
+    float: right;
+    position: relative;
+    top: -4px;
+    padding-left: 0;
+}
+
+.blink {
+    animation: blinker 2s linear infinite;
+}
+
+.q-actions .ac p {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+    white-space: nowrap;
+    color: var(--s-tertiary);
+}
+
+p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #01132D;
+    line-height: 26px;
+}
+
+.q-actions .ac h5 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.q-actions .ac .ic i {
+    color: var(--s-primary);
+    font-size: 24px;
+    width: 30px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.q-actions .ac .ic {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 32px;
+    position: relative;
+    top: 1px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.q-actions .ac * {
+    color: #fff;
+}
+
+.q-actions .ac {
+    float: left;
+    display: flex;
+    padding-left: 18px;
+}
+
+.ht-item.q-actions {
+    flex: 0 0 550px;
+    padding: 9px 0 0 10px;
+}
+
+.ht-item.search button {
+    position: absolute;
+    right: 7px;
+    top: 14px;
+    border: none;
+    background: none;
+}
+
+.dropdown-menu .search-results {
+    padding: 10px;
+    height: 450px;
+    overflow: auto;
+}
+
+.nav li.active {
+    background: #E5330B;
+    color: #fff;
+    box-shadow: none;
+}
+.nav li {
+    flex: 0 0 auto;
+    line-height: 40px;
+    padding: 0 15px;
+    margin: 10px 5px 0 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    list-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    flex: 0 0 50px;
+    align-content: center;
+}
+
+.nav-tabs {
+    background: rgba(55, 73, 187, 0.05);
+    padding: 0 20px 10px;
+}
+
+.dropdown-menu .search-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    background: #fff;
+    padding: 0;
+    margin-top: 0px;
+    z-index: 99;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.05) inset, 0 -5px 0 0 #fff;
+    width: 100%;
+}
+
+header .search input {
+    border: none;
+    padding: 0 40px 0 20px;
+    font-weight: normal;
+    border-radius: 4px;
+    margin-bottom: 0;
+}
+
+input, select, textarea {
+    font-size: 15px;
+    height: 42px;
+    padding: 5px 15px;
+    background: #fff;
+    outline: none;
+    width: 100%;
+    font-family: "Trebuchet MS", sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.ht-item.search {
+    padding: 5px 0;
+    position: relative;
+}
+
+.material-icons {
+    height: 24px;
+    width: 24px;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}
+
+@media (min-width: 1280px) {
+    #lc-toggle, #column-left .lc-close, .h-desk {
+        display: none !important;
+    }
+}
+.ht-item.logo img {
+    height: 52px;
+    width: auto;
+    display: inline-block;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    color: var(--s-primary);
+}
+
+.ht-item.logo {
+    flex: 0 0 160px;
+}
+.ht-item {
+    flex: 1 1 auto;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media (min-width: 1366px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+header .top .container {
+    display: flex;
+}
+header .top {
+    padding: 15px 0;
+    /* background-color: #081621; */
+}
+header {
+    background: var(--s-hf-bg);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 100;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: "Trebuchet MS", sans-serif;
+    line-height: 1.15;
+    font-size: 15px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
