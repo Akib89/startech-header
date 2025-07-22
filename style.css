@@ -773,3 +773,15 @@ button {
         color: #000;
     }
 }
+
+@media (max-width: 1279px) {
+    .q-actions .ac.build-pc {
+        display: none;
+    }
+}
+
+@media (max-width: 1279px) {
+    body.no-scroll {
+        overflow: hidden;
+    }
+}
