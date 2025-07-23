@@ -19,7 +19,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
@@ -42,11 +45,19 @@
         <div class="container">
           <div class="ht-item logo">
             <div class="mbl-nav-top h-desk">
-              <div id="nav-toggler">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+              <!-- <div id="nav-toggler"> -->
+              <button
+                class="mobile-menu-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarMenu"
+              >
+                <span class="custom-hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </button>
             </div>
             <a class="brand" href="https://www.startech.com.bd/"
               ><img
@@ -57,8 +68,25 @@
                 alt="Star Tech Ltd "
             /></a>
             <div class="mbl-right h-desk">
-              <div class="ac search-toggler">
-                <i class="material-icons">search</i>
+              <div class="position-relative">
+                <div class="search-toggler" onclick="toggleSearchBar()">
+                  <i class="material-icons">search</i>
+                </div>
+
+                <!-- Search Input (Initially Hidden) -->
+                <div
+                  id="mobileSearchBar"
+                  class="mobile-search-bar position-absolute"
+                >
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search..."
+                  />
+                  <button class="search-btn">
+                    <i class="material-icons">search</i>
+                  </button>
+                </div>
               </div>
               <div class="ac mc-toggler">
                 <i class="material-icons">shopping_basket</i
@@ -133,18 +161,19 @@
             </div>
             <div class="ac">
               <a class="ic" href="https://www.startech.com.bd/account/login">
-                <!-- <i class="material-icons">person</i></a> -->
+                <i class="material-icons">person</i></a
+              >
               <div class="ac-content">
                 <a href="https://www.startech.com.bd/account/login"
                   ><h5>Account</h5></a
                 >
-                <!-- <p>
+                <p>
                   <a href="https://www.startech.com.bd/account/register"
                     >Register</a
                   >
                   or
                   <a href="https://www.startech.com.bd/account/login">Login</a>
-                </p> -->
+                </p>
               </div>
             </div>
             <div class="ac build-pc m-hide">
@@ -155,32 +184,6 @@
           </div>
         </div>
       </div>
-
-<!-- <div class="category-menu">
-    <div class="container">
-      <ul class="m-0 p-0">
-        <li><a href="#">Desktop</a></li>
-        <li><a href="#">Laptop</a></li>
-        <li><a href="#">Component</a></li>
-        <li><a href="#">Monitor</a></li>
-        <li><a href="#">UPS</a></li>
-        <li><a href="#">Phone</a></li>
-        <li><a href="#">Tablet</a></li>
-        <li><a href="#">Office Equipment</a></li>
-        <li><a href="#">Camera</a></li>
-        <li><a href="#">Security</a></li>
-        <li><a href="#">Networking</a></li>
-        <li><a href="#">Software</a></li>
-        <li><a href="#">Server & Storage</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Gadget</a></li>
-        <li><a href="#">Gaming</a></li>
-        <li><a href="#">TV</a></li>
-        <li><a href="#">Appliance</a></li>
-      </ul>
-    </div>
-  </div> -->
-
 
       <nav class="navbar" id="main-nav">
         <div class="container">
@@ -2014,7 +2017,8 @@
                   <a
                     href="https://www.startech.com.bd/component"
                     class="see-all"
-                    >Show All Component</a>
+                    >Show All Component</a
+                  >
                 </li>
               </ul>
             </li>
@@ -2123,7 +2127,6 @@
                     >
                   </li>
                 </ul>
-                
               </div>
             </li>
             <li class="nav-item has-child">
@@ -3671,7 +3674,6 @@
                     </ul>
                   </li>
                 </ul>
-                
               </div>
             </li>
             <li class="nav-item has-child">
@@ -9692,22 +9694,166 @@
           </ul>
         </div>
       </nav>
+
+      <div
+        class="offcanvas offcanvas-start text-black"
+        tabindex="-1"
+        id="sidebarMenu"
+        style="width: 70%"
+      >
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-black"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body px-3">
+          <ul class="list-unstyled category-list">
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Desktop</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Laptop</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Component</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Monitor</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">UPS</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Phone</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Tablet</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1"
+                >Office Equipment</a
+              >
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Camera</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Security</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Networking</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1">Software</a>
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1"
+                >Server & Storage</a
+              >
+              <span class="plus-icon">+</span>
+            </li>
+            <li
+              class="d-flex justify-content-between align-items-center py-2 border-bottom"
+            >
+              <a href="#" class="nav-link text-black flex-grow-1"
+                >Accessories</a
+              >
+              <span class="plus-icon">+</span>
+            </li>
+          </ul>
+
+          <!-- Search -->
+          <div class="mt-3">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control bg-dark text-black border-secondary"
+                placeholder="Search..."
+              />
+              <span
+                class="input-group-text bg-dark text-black border-secondary"
+                style="height: 46px"
+                ><i class="fa fa-search"></i
+              ></span>
+            </div>
+          </div>
+          <!-- Social Icons -->
+          <div class="d-flex justify-content-center gap-2 mt-3">
+            <a href="#" class="btn btn-sm btn-primary"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="btn btn-sm btn-info"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="btn btn-sm btn-warning"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </header>
   </body>
-  
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"
+  ></script>
+
   <script>
+    function toggleSearchBar() {
+      const bar = document.getElementById("mobileSearchBar");
+      bar.style.display = bar.style.display === "block" ? "none" : "flex";
+    }
 
+    document.addEventListener("DOMContentLoaded", function () {
+      const navToggler = document.getElementById("nav-toggler");
+      const nav = document.getElementById("main-nav");
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const navToggler = document.getElementById("nav-toggler");
-    const nav = document.getElementById("main-nav");
-
-    navToggler.addEventListener("click", () => {
-      nav.classList.toggle("open");
+      navToggler.addEventListener("click", () => {
+        nav.classList.toggle("open");
+      });
     });
-  });
-
-
-
   </script>
 </html>
