@@ -978,3 +978,64 @@ button {
     }
 }
 
+/* Sticky header styles */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* make sure it's above everything */
+  background-color: white; /* or your desired background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional, for effect */
+}
+
+/* Reset & layout */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic navbar style */
+.navbar {
+  padding: 10px 20px;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Dropdown */
+.drop-down {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  min-width: 200px;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover > .drop-down {
+  display: block;
+}
+
+/* Nested dropdown (flyout) */
+.drop-menu-2 {
+  left: 100%;
+  top: 0;
+}

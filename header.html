@@ -184,7 +184,7 @@
           </div>
         </div>
       </div>
-
+<div class="sticky-header">
       <nav class="navbar" id="main-nav">
         <div class="container">
           <ul class="navbar-nav">
@@ -9694,7 +9694,7 @@
           </ul>
         </div>
       </nav>
-
+    </div>
       <div
         class="offcanvas offcanvas-start text-black"
         tabindex="-1"
@@ -9833,6 +9833,12 @@
         </div>
       </div>
     </header>
+
+     <img src="img/1.png" alt="Banner Image" class="w-100" />
+     <img src="img/1.png" alt="Banner Image" class="w-100" />
+     <div class="container my-5">
+        <div class="row" id="cardContainer"></div>
+     </div>
   </body>
 
   <script
@@ -9855,5 +9861,18 @@
         nav.classList.toggle("open");
       });
     });
-  </script>
+  
+
+  const header = document.querySelector(".sticky-header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>
+
+
+
 </html>
