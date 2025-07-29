@@ -978,14 +978,42 @@ button {
     }
 }
 
-/* Sticky header styles */
-.sticky-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* make sure it's above everything */
-  background-color: white; /* or your desired background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional, for effect */
+
+/* =============  sticky header ================ */
+
+/* .sticky-header {
+    transition: all 0.3s ease;
+} */
+
+.sticky-header .logo {
+    max-width: 85px;
+    transition: max-width 0.3s ease, transform 0.3s ease;
 }
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.sticky-header.is-sticky {
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    z-index: 1040;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.6s ease;
+    padding: 10px 2px;
+}
+/* =============  sticky header ================ */
+
 
 /* Reset & layout */
 body, html {
@@ -995,7 +1023,7 @@ body, html {
 
 /* Basic navbar style */
 .navbar {
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 .navbar-nav {

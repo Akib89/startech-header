@@ -9836,6 +9836,10 @@
 
      <img src="img/1.png" alt="Banner Image" class="w-100" />
      <img src="img/1.png" alt="Banner Image" class="w-100" />
+      <img src="img/1.png" alt="Banner Image" class="w-100" />
+     <img src="img/1.png" alt="Banner Image" class="w-100" />
+      <img src="img/1.png" alt="Banner Image" class="w-100" />
+     <img src="img/1.png" alt="Banner Image" class="w-100" />
      <div class="container my-5">
         <div class="row" id="cardContainer"></div>
      </div>
@@ -9863,14 +9867,23 @@
     });
   
 
-  const header = document.querySelector(".sticky-header");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
+const header = document.querySelector(".sticky-header");
+
+function handleScroll() {
+  const isDesktop = window.innerWidth >= 768; // Adjust breakpoint as needed
+
+  if (isDesktop && window.scrollY > 0) {
+    header.classList.add("is-sticky");
+  } else {
+    header.classList.remove("is-sticky");
+  }
+}
+
+// Initial check and on scroll
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("resize", handleScroll); // In case of resizing
+handleScroll(); // Run once on load
+
 </script>
 
 
